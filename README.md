@@ -41,7 +41,7 @@ for {
 value, ok := queue.Pop(true)
 
 // Close
-// Like buffered channel, producer cannot be push after Close()
+// Like buffered channel, producer cannot push after Close()
 // But consumers can pop until no element.
 queue.Close()
 
