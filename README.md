@@ -52,3 +52,8 @@ queue.ForEach(func (T) bool {
 })
 ```
 
+# Performance
+Cond is slower than Channel.
+
+Use it only when you need resizeable queue.
+
