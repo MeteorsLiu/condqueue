@@ -39,4 +39,16 @@ for {
 // if passing true to Pop(), it will not block anymore.
 // if there's no element in the queue, ok is false.
 value, ok := queue.Pop(true)
+
+// Close
+// Like buffered channel, producer cannot be push after Close()
+// But consumers can pop until no element.
+queue.Close()
+
+// Foreach
+// return true to stop while false to continue
+queue.ForEach(func (T) bool {
+   
+})
 ```
+
